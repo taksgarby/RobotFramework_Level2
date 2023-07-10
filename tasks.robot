@@ -8,6 +8,7 @@ Documentation       Orders robots from RObotSpareBin Iindustries Inc.
 Library             RPA.Browser.Selenium    auto_close=${FALSE}
 Library             RPA.HTTP
 Library             RPA.Tables
+Library             RPA.PDF
 
 
 *** Tasks ***
@@ -38,6 +39,7 @@ Process orders
         Fill the form and submit    ${order}
         Preview the robot
         Wait Until Keyword Succeeds    1 min    2 sec    Submit the order
+        ${pdf} =    Store the receipt as a PDF file    ${order}[Order number]
         Wait Until Keyword Succeeds    1 min    2 sec    Click to order another robot
     END
 
@@ -60,3 +62,8 @@ Submit the order
 
 Click to order another robot
     Click Button    order-another
+
+Store the receipt as a PDF file
+    [Arguments]    ${order_id}
+    ${receipt_html} =    Get Element Attribute    id:receipt    outerHTML
+    Html To Pdf    ${receipt_html}    ${OUTPUT_DIR}${/}receipt${/}${order_id}.pdf
