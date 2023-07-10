@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20230707 15:43:49.688" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="/Users/TakakoOnozuka/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open the robot order website">
+<msg timestamp="20230707 15:43:50.217" level="FAIL">No keyword with name 'Open the robot order website' found.</msg>
+<status status="FAIL" starttime="20230707 15:43:50.217" endtime="20230707 15:43:50.217"/>
+</kw>
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>https://robotsparebinindustries.com/#/robot-order</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230707 15:45:22.441" level="FAIL">TypeError: __init__() got an unexpected keyword argument 'firefox_profile'</msg>
+<status status="FAIL" starttime="20230707 15:45:22.435" endtime="20230707 15:45:22.444"/>
+</kw>
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230707 17:35:30.241" level="FAIL">TypeError: __init__() got an unexpected keyword argument 'firefox_profile'</msg>
+<status status="FAIL" starttime="20230707 17:35:30.228" endtime="20230707 17:35:30.244"/>
+</kw>
+<kw name="Open Chrome Browser" library="RPA.Browser.Selenium">
+<arg>https://robotsparebinindustries.com/#/robot-order</arg>
+<arg>chrome</arg>
+<doc>Open Chrome browser. See ``Open Available Browser`` for
+descriptions of arguments.</doc>
+<msg timestamp="20230707 17:36:07.198" level="FAIL">BrowserNotFoundError: Failed to start a browser:
+- Chrome: Message: unknown error: Chrome failed to start: exited normally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /Applications/Google Chrome.app/Contents/MacOS/Google Chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+0   chromedriver                        0x0000000102b286b8 chromedriver + 4937400
+1   chromedriver                        0x0000000102b1fb73 chromedriver + 4901747
+2   chromedriver                        0x00000001026dd616 chromedriver + 435734
+3   chromedriver                        0x000000010270b8ea chromedriver + 624874
+4   chromedriver                        0x000000010270767c chromedriver + 607868
+5   chromedriver                        0x000000010274ea08 chromedriver + 899592
+6   chromedriver                        0x000000010274debf chromedriver + 896703
+7   chromedriver                        0x0000000102744de3 chromedriver + 859619
+8   chromedriver                        0x0000000102712d7f chromedriver + 654719
+9   chromedriver                        0x00000001027140de chromedriver + 659678
+10  chromedriver                        0x0000000102ae42ad chromedriver + 4657837
+11  chromedriver                        0x0000000102ae9130 chromedriver + 4677936
+12  chromedriver                        0x0000000102aefdef chromedriver + 4705775
+13  chromedriver                        0x0000000102aea05a chromedriver + 4681818
+14  chromedriver                        0x0000000102abc92c chromedriver + 4495660
+15  chromedriver                        0x0000000102b07838 chromedriver + 4802616
+16  chromedriver                        0x0000000102b079b7 chromedriver + 4802999
+17  chromedriver                        0x0000000102b1899f chromedriver + 4872607
+18  libsystem_pthread.dylib             0x00007ff805f954e1 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff805f90f6b thread_start + 15
+
+</msg>
+<status status="FAIL" starttime="20230707 17:35:52.715" endtime="20230707 17:36:07.199"/>
+</kw>
+<kw name="Open Chrome Browser" library="RPA.Browser.Selenium">
+<arg>https://robotsparebinindustries.com/#/robot-order</arg>
+<arg>chrome</arg>
+<doc>Open Chrome browser. See ``Open Available Browser`` for
+descriptions of arguments.</doc>
+<msg timestamp="20230707 17:37:28.339" level="FAIL">BrowserNotFoundError: Failed to start a browser:
+- Chrome: Message: unknown error: Chrome failed to start: exited normally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /Applications/Google Chrome.app/Contents/MacOS/Google Chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+0   chromedriver                        0x00000001004fc6b8 chromedriver + 4937400
+1   chromedriver                        0x00000001004f3b73 chromedriver + 4901747
+2   chromedriver                        0x00000001000b1616 chromedriver + 435734
+3   chromedriver                        0x00000001000df8ea chromedriver + 624874
+4   chromedriver                        0x00000001000db67c chromedriver + 607868
+5   chromedriver                        0x0000000100122a08 chromedriver + 899592
+6   chromedriver                        0x0000000100121ebf chromedriver + 896703
+7   chromedriver                        0x0000000100118de3 chromedriver + 859619
+8   chromedriver                        0x00000001000e6d7f chromedriver + 654719
+9   chromedriver                        0x00000001000e80de chromedriver + 659678
+10  chromedriver                        0x00000001004b82ad chromedriver + 4657837
+11  chromedriver                        0x00000001004bd130 chromedriver + 4677936
+12  chromedriver                        0x00000001004c3def chromedriver + 4705775
+13  chromedriver                        0x00000001004be05a chromedriver + 4681818
+14  chromedriver                        0x000000010049092c chromedriver + 4495660
+15  chromedriver                        0x00000001004db838 chromedriver + 4802616
+16  chromedriver                        0x00000001004db9b7 chromedriver + 4802999
+17  chromedriver                        0x00000001004ec99f chromedriver + 4872607
+18  libsystem_pthread.dylib             0x00007ff805f954e1 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff805f90f6b thread_start + 15
+
+</msg>
+<status status="FAIL" starttime="20230707 17:37:18.236" endtime="20230707 17:37:28.339"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>https://robotsparebinindustries.com/#/robot-order</arg>
+<arg>chrome</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20230707 17:38:14.312" level="FAIL">
