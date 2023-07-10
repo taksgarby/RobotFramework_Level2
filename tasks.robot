@@ -9,6 +9,7 @@ Library             RPA.Browser.Selenium    auto_close=${FALSE}
 Library             RPA.HTTP
 Library             RPA.Tables
 Library             RPA.PDF
+Library             RPA.FTP
 
 
 *** Tasks ***
@@ -25,7 +26,7 @@ Open the robot order website
     Open Available Browser    https://robotsparebinindustries.com/#/robot-order
 
 Download the CSV file
-    Download    https://robotsparebinindustries.com/orders.csv    overwrite=True
+    RPA.HTTP.Download    https://robotsparebinindustries.com/orders.csv    overwrite=True
 
 Get Orders
     ${orderTable} =    Read table from CSV    orders.csv
@@ -41,6 +42,7 @@ Process orders
         Wait Until Keyword Succeeds    1 min    2 sec    Submit the order
         ${pdf} =    Store the receipt as a PDF file    ${order}[Order number]
         ${screenshot} =    Take a screenshot of the robot image    ${order}[Order number]
+        Embed the robot screenshot to the receipt PDF file    ${screenshot}    ${pdf}
         Wait Until Keyword Succeeds    1 min    2 sec    Click to order another robot
     END
 
@@ -68,7 +70,15 @@ Store the receipt as a PDF file
     [Arguments]    ${order_id}
     ${receipt_html} =    Get Element Attribute    id:receipt    outerHTML
     Html To Pdf    ${receipt_html}    ${OUTPUT_DIR}${/}receipts${/}${order_id}.pdf
+    RETURN    ${OUTPUT_DIR}${/}receipts${/}${order_id}.pdf
 
 Take a screenshot of the robot image
     [Arguments]    ${order_id}
     Screenshot    id:robot-preview-image    ${OUTPUT_DIR}${/}images${/}${order_id}.png
+    RETURN    ${OUTPUT_DIR}${/}images${/}${order_id}.png
+
+Embed the robot screenshot to the receipt PDF file
+    [Arguments]    ${screenshot}    ${pdf}
+    Open Pdf    ${pdf}
+    Add Watermark Image To Pdf    image_path=${screenshot}    output_path=${pdf}
+    Close Pdf    ${pdf}

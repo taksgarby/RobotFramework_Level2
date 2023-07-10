@@ -92,4 +92,82 @@ Stacktrace:
 <doc>Attempts to open a browser on the user's device from a set of
 supported browsers. Automatically downloads a corresponding webdriver
 if none is already installed.</doc>
-<msg timestamp="20230707 17:38:14.312" level="FAIL">
+<msg timestamp="20230707 17:38:14.312" level="FAIL">BrowserNotFoundError: Failed to start a browser:
+- Chrome: Message: unknown error: Chrome failed to start: exited normally.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /Applications/Google Chrome.app/Contents/MacOS/Google Chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+0   chromedriver                        0x00000001008a46b8 chromedriver + 4937400
+1   chromedriver                        0x000000010089bb73 chromedriver + 4901747
+2   chromedriver                        0x0000000100459616 chromedriver + 435734
+3   chromedriver                        0x00000001004878ea chromedriver + 624874
+4   chromedriver                        0x000000010048367c chromedriver + 607868
+5   chromedriver                        0x00000001004caa08 chromedriver + 899592
+6   chromedriver                        0x00000001004c9ebf chromedriver + 896703
+7   chromedriver                        0x00000001004c0de3 chromedriver + 859619
+8   chromedriver                        0x000000010048ed7f chromedriver + 654719
+9   chromedriver                        0x00000001004900de chromedriver + 659678
+10  chromedriver                        0x00000001008602ad chromedriver + 4657837
+11  chromedriver                        0x0000000100865130 chromedriver + 4677936
+12  chromedriver                        0x000000010086bdef chromedriver + 4705775
+13  chromedriver                        0x000000010086605a chromedriver + 4681818
+14  chromedriver                        0x000000010083892c chromedriver + 4495660
+15  chromedriver                        0x0000000100883838 chromedriver + 4802616
+16  chromedriver                        0x00000001008839b7 chromedriver + 4802999
+17  chromedriver                        0x000000010089499f chromedriver + 4872607
+18  libsystem_pthread.dylib             0x00007ff805f954e1 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff805f90f6b thread_start + 15
+
+- Firefox: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+
+- Edge: Message: unknown error: cannot find msedge binary
+Stacktrace:
+0   msedgedriver                        0x00000001005cca78 msedgedriver + 5106296
+1   msedgedriver                        0x00000001005c3fb3 msedgedriver + 5070771
+2   msedgedriver                        0x00000001001590e6 msedgedriver + 438502
+3   msedgedriver                        0x00000001001887d9 msedgedriver + 632793
+4   msedgedriver                        0x0000000100185571 msedgedriver + 619889
+5   msedgedriver                        0x00000001001ce0aa msedgedriver + 917674
+6   msedgedriver                        0x00000001001cd12c msedgedriver + 913708
+7   msedgedriver                        0x00000001001c3eb3 msedgedriver + 876211
+8   msedgedriver                        0x0000000100191d28 msedgedriver + 671016
+9   msedgedriver                        0x00000001001930ce msedgedriver + 676046
+10  msedgedriver                        0x00000001005866eb msedgedriver + 4818667
+11  msedgedriver                        0x000000010058b0e4 msedgedriver + 4837604
+12  msedgedriver                        0x000000010058b855 msedgedriver + 4839509
+13  msedgedriver                        0x00000001005923ef msedgedriver + 4867055
+14  msedgedriver                        0x000000010058bf2c msedgedriver + 4841260
+15  msedgedriver                        0x0000000100560d40 msedgedriver + 4664640
+16  msedgedriver                        0x00000001005abec8 msedgedriver + 4972232
+17  msedgedriver                        0x00000001005ac073 msedgedriver + 4972659
+18  msedgedriver                        0x00000001005bd738 msedgedriver + 5044024
+19  libsystem_pthread.dylib             0x00007ff805f954e1 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff805f90f6b thread_start + 15
+
+- Safari: Unsupported browser 'Safari' for webdriver download! (choose from: Chrome, Firefox, Gecko, Mozilla, Opera, Edge, ChromiumEdge, Ie)
+</msg>
+<status status="FAIL" starttime="20230707 17:37:51.836" endtime="20230707 17:38:14.340"/>
+</kw>
+<kw name="Fill the form">
+<msg timestamp="20230709 14:31:49.833" level="FAIL">User keyword 'Fill the form' contains no keywords.</msg>
+<status status="FAIL" starttime="20230709 14:31:49.826" endtime="20230709 14:31:49.833"/>
+</kw>
+<status status="PASS" starttime="20230707 15:43:49.710" endtime="20230710 15:48:09.229"/>
+</kw>
+<status status="PASS" starttime="20230707 15:43:49.710" endtime="20230710 15:48:09.235"/>
+</test>
+<status status="PASS" starttime="20230707 15:43:49.689" endtime="20230710 15:48:09.255"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
