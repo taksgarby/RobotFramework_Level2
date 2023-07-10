@@ -12,16 +12,20 @@ Library             RPA.PDF
 Library             RPA.FTP
 # for creating zip archive
 Library             RPA.Archive
+# Mute On Run Failure keyword prevents keywords from generating a screenshot on failure
+Library             RPA.RobotLogListener
 
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
+    Mute Run On Failure    Run Keyword
     Open the robot order website
     Download the CSV file
     # Close the modal
     Maximize Browser Window
     Process orders
     Create a ZIP file of receipt PDF files
+    [Teardown]    Close the browser
 
 
 *** Keywords ***
@@ -91,3 +95,6 @@ Create a ZIP file of receipt PDF files
     Archive Folder With Zip
     ...    ${OUTPUT_DIR}${/}receipts
     ...    ${zip_file_name}
+
+Close the browser
+    Close Browser
