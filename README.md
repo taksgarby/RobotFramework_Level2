@@ -1,3 +1,5 @@
+<h3>This is a work in progress and will be updated frequently.</h3>
+
 ## Learning materials
 
 - [Robocorp Developer Training Courses](https://robocorp.com/docs/courses)
