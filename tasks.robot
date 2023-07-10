@@ -10,6 +10,8 @@ Library             RPA.HTTP
 Library             RPA.Tables
 Library             RPA.PDF
 Library             RPA.FTP
+# for creating zip archive
+Library             RPA.Archive
 
 
 *** Tasks ***
@@ -19,6 +21,7 @@ Order robots from RobotSpareBin Industries Inc
     # Close the modal
     Maximize Browser Window
     Process orders
+    Create a ZIP file of receipt PDF files
 
 
 *** Keywords ***
@@ -82,3 +85,9 @@ Embed the robot screenshot to the receipt PDF file
     Open Pdf    ${pdf}
     Add Watermark Image To Pdf    image_path=${screenshot}    output_path=${pdf}
     Close Pdf    ${pdf}
+
+Create a ZIP file of receipt PDF files
+    ${zip_file_name} =    Set Variable    ${OUTPUT_DIR}/PDFs.zip
+    Archive Folder With Zip
+    ...    ${OUTPUT_DIR}${/}receipts
+    ...    ${zip_file_name}
