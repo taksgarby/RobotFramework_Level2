@@ -21,7 +21,6 @@ Order robots from RobotSpareBin Industries Inc
     Mute Run On Failure    Run Keyword
     Open the robot order website
     Download the CSV file
-    # Maximize Browser Window
     Process orders
     Create a ZIP file of receipt PDF files
     [Teardown]    Close the browser
