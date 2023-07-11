@@ -20,5 +20,10 @@ I am learning towards Robot Framework Level 2. </br>
 : Save each order HTML receipt as a PDF file.</br>
 : Save a screenshot of each of the ordered robots.</br>
 : Embed the screenshot of the robot to the PDF receipt.</br>
+: Create a zip file of the screenshots in a new directory. </br>
 
-So far, it has been challenging but fun!
+Update - 
+I have completed all the required tasks and passed the theory test:) 
+
+Next step - 
+More practice using the Control Room.
