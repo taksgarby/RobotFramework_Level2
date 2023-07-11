@@ -22,12 +22,15 @@ I am learning towards Robot Framework Level 2. </br>
 : Embed the screenshot of the robot to the PDF receipt.</br>
 : Create a zip file of the screenshots in a new directory. </br>
 
-<b>Learning curves</b>
+<b>Learning curves</b></br>
 : The task failure was avoided by giving 1 minute timeout instead of retry 3 times. </br>
 
  Wait Until Keyword Succeeds    3x    2 sec    Submit the order    *fail</br>
  Wait Until Keyword Succeeds    1 min    2 sec    Submit the order  *pass</br>
 
+: Naming the PDF files with their respective order id.  </br>
+
+${OUTPUT_DIR}${/}images${/}${order_id}.png</br>
 
 ![Screenshot 2023-07-11 at 09 17 46](https://github.com/taksgarby/RobotFramework_Level2/assets/91882718/25e0d764-2446-4367-a2c8-335943b71ad5)
 
