@@ -44,11 +44,11 @@ Process orders
         Close the modal
         Fill the form and submit    ${order}
         Preview the robot
-        Wait Until Keyword Succeeds    1 min    2 sec    Submit the order
+        Wait Until Keyword Succeeds    30 sec    2 sec    Submit the order
         ${pdf} =    Store the receipt as a PDF file    ${order}[Order number]
         ${screenshot} =    Take a screenshot of the robot image    ${order}[Order number]
         Embed the robot screenshot to the receipt PDF file    ${screenshot}    ${pdf}
-        Wait Until Keyword Succeeds    1 min    2 sec    Click to order another robot
+        Wait Until Keyword Succeeds    30 sec    2 sec    Click to order another robot
     END
 
 Close the modal
