@@ -21,10 +21,10 @@
 
 <b>Learning curves</b></br>
 : The task failure was avoided by giving 1 minute timeout instead of retry 3 times. </br>
-```diff
-- Wait Until Keyword Succeeds    3x    2 sec    Submit the order    *fail</br>
-- Wait Until Keyword Succeeds    1 min    2 sec    Submit the order  *pass</br>
-```
+
+Wait Until Keyword Succeeds    3x    2 sec    Submit the order    *fail</br>
+Wait Until Keyword Succeeds    1 min    2 sec    Submit the order  *pass</br>
+
 ![Screenshot 2023-07-11 at 09 17 46](https://github.com/taksgarby/RobotFramework_Level2/assets/91882718/25e0d764-2446-4367-a2c8-335943b71ad5)
 
 : Naming the PDF files with their respective order id.  </br>
