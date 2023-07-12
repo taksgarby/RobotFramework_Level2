@@ -31,7 +31,7 @@ Wait Until Keyword Succeeds    30 sec    2 sec    Submit the order  *pass</br>
 
 ${OUTPUT_DIR}${/}images${/}${order_id}.png</br>
 
-<h3>The task flow created by Flow Explorer</h3>
+<h5>The task flow created by Flow Explorer</h5>
 
 ![Order robots from RobotSpareBin Industries Inc (tasks)](https://github.com/taksgarby/RobotFramework_Level2/assets/91882718/af45ab6e-8bb2-4de2-8c0c-876467d66e84)
 
